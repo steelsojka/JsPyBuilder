@@ -52,5 +52,5 @@ entries = [
 #    "OUTPUT_COMPILED_FILE": "Modules.min.js",
 #    "OUTPUT_CONCAT_FILE": "Modules.concat.js",
 #    "FILES": "*.js"
-  }
+#  }
 ]
