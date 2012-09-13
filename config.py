@@ -2,41 +2,31 @@
 
 settings = {
   # Path to the Google Closure coompiler
-  "COMPILER_PATH": "compiler.jar",
-
-  # Google closure master output file name
-  "OUTPUT_COMPILED_FILE": "output.min.js",
-  
-  # Master output for concatenated files
-  "OUTPUT_CONCAT_FILE": "output.concat.js",
-  
-  # Compile the master output
-  "COMPILE_MASTER_OUTPUT": True
+  "JS_COMPILER_PATH": "compiler.jar",
+  "JS_COMPILER_OPTIONS": "",
+  "CSS_COMPILER_PATH": "yuicompressor-2.4.7.jar",
+  "CSS_COMPILER_OPTIONS": ""
 }
 
-# These are file entries that will be used to concatenate and compile files
-# Each "entry" is a single directory
+# Each entry outputs a concat and/or compiled file
+# Files are dictionary entry with the key being the directory and the files
+# being a list or a string with a wildcard in it
+# Example: "FILES:" {
+#   "directory1": [
+#     "file1.js",
+#     "file2.js"
+#   ],
+#   "directory2": "*.js"  # All .js files in directory 2
+# }
 # 
-# (R) = ## REQUIRED ##
-# 
-# PATH (R): The directory in which the files are located 
-# ADD_TO_MASTER (R): Determines if these files should be added to the master feed 
-#   or compiled seperately
-# COMPILE: Only required if entry is NOT added to the master and compiled seperatly.
-#   Determines whether the files get compiled
-# OUTPUT_COMPILED_FILE: Only required if entry is NOT added to the master and compiled seperatly.
-#   Output file for compiled code
-# OUTPUT_CONCAT_FILE: Only required if entry is NOT added to the master and compiled seperatly.
-#   Output file for concatenated files
-# FILES (R): A list a files to be compiled. Can accept a string only if a wildcard is used.
-#   Example 1: "FILES": "*.js" # All .js files in a directory
-#   Example 2: [
-#     "Base.js",  # These will compile in this order
-#     "Alert.js",
-#     "Class.js"
-#   ]
+# COMPILE: Whether to run the output concat file through the compiler
+# OUTPUT_COMPILED_FILE: Compiled file output name
+# OUTPUT_CONCAT_FILE: Concatenated file output name
+# REMOVE_CONCAT: Remove concatenated file after compile only if file is compiled
+# FILES: Dictionary of file paths as keys and a list of files
 
 entries = [
+<<<<<<< HEAD
 #  {
 #    "PATH": "../js/Classes/",
 #    "ADD_TO_MASTER": True,
@@ -53,4 +43,27 @@ entries = [
 #    "OUTPUT_CONCAT_FILE": "Modules.concat.js",
 #    "FILES": "*.js"
 #  }
+=======
+  {
+    "COMPILE": True,
+    "OUTPUT_COMPILED_FILE": "Classes.min.js",
+    "OUTPUT_CONCAT_FILE": "Classes.concat.js",
+    "REMOVE_CONCAT": False,
+    "FILES": {
+      "../js/Classes/": [
+        "Base.js",
+        "Alert.js"
+      ]
+    }
+  },
+  {
+    "COMPILE": True,
+    "OUTPUT_CONCAT_FILE": "stylesheets.concat.css",
+    "OUTPUT_COMPILED_FILE": "stylesheets.min.css",
+    "REMOVE_CONCAT": False,
+    "FILES": {
+      "../stylesheets/": ["bootstrap.css", "style.css"]
+    }
+  }
+>>>>>>> Update functionality
 ]
