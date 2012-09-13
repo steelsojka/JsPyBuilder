@@ -1,7 +1,7 @@
 JsPyBuilder
 ===========
 
-JsPyBuidler concatenates and minifies (compiles) files and spits out the output.  This script was originally written for JS and CSS files for web but can be used to concatenate any file type.  
+JsPyBuilder concatenates and minifies (compiles) files and spits out the output.  This script was originally written for JS and CSS files for web (hence the name) but can be used to concatenate any file type.
 
 Uses
 ====
@@ -79,3 +79,7 @@ Run script from the command line by running build.py
 ```
 >> python build.py
 ```
+
+License
+=======
+MIT Licensed
