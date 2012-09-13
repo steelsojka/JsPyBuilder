@@ -5,7 +5,18 @@ settings = {
   "JS_COMPILER_PATH": "compiler.jar",
   "JS_COMPILER_OPTIONS": "",
   "CSS_COMPILER_PATH": "yuicompressor-2.4.7.jar",
-  "CSS_COMPILER_OPTIONS": ""
+  "CSS_COMPILER_OPTIONS": "",
+  "RUN_COMPILER": True,
+  "RUN_VERSIONING": True
+}
+
+version = {
+  "FILES": ["../html_top.cfm"],
+  "JS_PATTERN": "main.[0-9]+.js",
+  "CSS_PATTERN": "main.[0-9]+.css",
+  "JS_VERSION": "main.74.js",
+  "CSS_VERSION": "main.72.css"
+
 }
 
 # Each entry outputs a concat and/or compiled file
@@ -26,29 +37,11 @@ settings = {
 # FILES: Dictionary of file paths as keys and a list of files
 
 entries = [
-<<<<<<< HEAD
-#  {
-#    "PATH": "../js/Classes/",
-#    "ADD_TO_MASTER": True,
-#    "COMPILE": True,
-#    "OUTPUT_COMPILED_FILE": "Classes.min.js",
-#    "OUTPUT_CONCAT_FILE": "Classes.concat.js",
-#    "FILES": "*.js"
-#  },
-#  {
-#    "PATH": "../js/Modules/",
-#    "ADD_TO_MASTER": True,
-#    "COMPILE": False,
-#    "OUTPUT_COMPILED_FILE": "Modules.min.js",
-#    "OUTPUT_CONCAT_FILE": "Modules.concat.js",
-#    "FILES": "*.js"
-#  }
-=======
   {
     "COMPILE": True,
     "OUTPUT_COMPILED_FILE": "Classes.min.js",
     "OUTPUT_CONCAT_FILE": "Classes.concat.js",
-    "REMOVE_CONCAT": False,
+    "REMOVE_CONCAT": True,
     "FILES": {
       "../js/Classes/": [
         "Base.js",
@@ -60,10 +53,9 @@ entries = [
     "COMPILE": True,
     "OUTPUT_CONCAT_FILE": "stylesheets.concat.css",
     "OUTPUT_COMPILED_FILE": "stylesheets.min.css",
-    "REMOVE_CONCAT": False,
+    "REMOVE_CONCAT": True,
     "FILES": {
       "../stylesheets/": ["bootstrap.css", "style.css"]
     }
   }
->>>>>>> Update functionality
 ]
