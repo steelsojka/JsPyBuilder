@@ -11,7 +11,7 @@ settings = {
 }
 
 version = {
-  "FILES": ["../html_top.cfm"],
+  "FILES": ["../index.html"],
   "JS_PATTERN": "main.[0-9]+.js",
   "CSS_PATTERN": "main.[0-9]+.css",
   "JS_VERSION": "main.74.js",
