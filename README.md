@@ -23,7 +23,7 @@ entries = [
     "OUTPUT_CONCAT_FILE": "Classes.concat.js",
     "REMOVE_CONCAT": True,
     "FILES": {
-      "../js/Classes/": [
+      "../js/Classes/": [   # This will concat in this order
         "Base.js",
         "Alert.js"
       ]
