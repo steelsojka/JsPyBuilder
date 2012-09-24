@@ -63,11 +63,11 @@ Versioning is just a simple regular expression replace of strings where static f
 
 ```python
 version = {
-  "FILES": ["../html_top.cfm"],  # List of files to look in
+  "FILES": ["../index.html"],  # List of files to look in
   "JS_PATTERN": "main.[0-9]+.js",  # Pattern to replace for JS
   "CSS_PATTERN": "main.[0-9]+.css", # Pattern to replace for CSS
-  "JS_VERSION": "main.74.js", # What to replace JS with
-  "CSS_VERSION": "main.72.css"  # What to replace CSS with
+  "JS_VERSION": "main.23.js", # What to replace JS with
+  "CSS_VERSION": "main.12.css"  # What to replace CSS with
 }
 ```
 
