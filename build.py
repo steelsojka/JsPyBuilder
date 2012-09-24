@@ -1,3 +1,7 @@
+#!/usr/bin/env python
+# Make executable with
+# >> chmod +x build.py
+
 # Main run file
 
 import config
